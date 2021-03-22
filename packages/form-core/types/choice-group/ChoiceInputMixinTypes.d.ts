@@ -65,7 +65,7 @@ export declare class ChoiceInputHost {
 
   formatter(modelValue: ChoiceInputModelValue): string;
 
-  _isEmpty(): void;
+  protected _isEmpty(): void;
 
   _syncValueUpwards(): void;
 

@@ -43,6 +43,7 @@ export class LionTextarea extends NativeTextFieldMixin(LionFieldWithTextArea) {
     };
   }
 
+  // @ts-ignore
   get slots() {
     return {
       ...super.slots,
@@ -95,7 +96,8 @@ export class LionTextarea extends NativeTextFieldMixin(LionFieldWithTextArea) {
     if (changedProperties.has('rows')) {
       const native = this._inputNode;
       if (native) {
-        native.rows = this.rows;
+        // eslint-disable-next-line dot-notation
+        native['rows'] = this.rows;
       }
     }
 

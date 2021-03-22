@@ -34,11 +34,11 @@ export declare class ChoiceGroupHost {
 
   _throwWhenInvalidChildModelValue(child: FormControlHost): void;
 
-  _isEmpty(): void;
+  protected _isEmpty(): void;
 
   _checkSingleChoiceElements(ev: Event): void;
 
-  _getCheckedElements(): void;
+  protected _getCheckedElements(): void;
 
   _setCheckedElements(value: any, check: boolean): void;
 

@@ -98,6 +98,7 @@ const ListboxMixinImplementation = superclass =>
 
     /**
      * @override FormControlMixin
+     * @protected
      */
     // eslint-disable-next-line
     _inputGroupInputTemplate() {

@@ -21,7 +21,7 @@ export declare class FormatHost {
   set value(value: string);
 
   _calculateValues(opts: { source: 'model' | 'serialized' | 'formatted' | null }): void;
-  __callParser(value: string | undefined): object;
+  private __callParser(value: string | undefined): object;
   __callFormatter(): string;
   _onModelValueChanged(arg: { modelValue: unknown }): void;
   _dispatchModelValueChangedEvent(): void;

@@ -10,6 +10,7 @@ import { parseAmount } from './parsers.js';
  *
  * @customElement lion-input-amount
  */
+// @ts-ignore
 export class LionInputAmount extends LocalizeMixin(LionInput) {
   /** @type {any} */
   static get properties() {
@@ -109,6 +110,7 @@ export class LionInputAmount extends LocalizeMixin(LionInput) {
     this.__parserCallcountSincePaste += 1;
     this.__isPasting = this.__parserCallcountSincePaste === 2;
     this.formatOptions.mode = this.__isPasting === true ? 'pasted' : 'auto';
+    // @ts-ignore
     return super.__callParser(value);
   }
 

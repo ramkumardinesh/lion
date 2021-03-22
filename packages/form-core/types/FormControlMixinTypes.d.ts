@@ -129,14 +129,14 @@ export declare class FormControlHost {
   updated(changedProperties: import('@lion/core').PropertyValues): void;
 
   render(): TemplateResult;
-  _groupOneTemplate(): TemplateResult;
-  _groupTwoTemplate(): TemplateResult;
+  protected _groupOneTemplate(): TemplateResult;
+  protected _groupTwoTemplate(): TemplateResult;
   _labelTemplate(): TemplateResult;
   _helpTextTemplate(): TemplateResult;
-  _inputGroupTemplate(): TemplateResult;
+  protected _inputGroupTemplate(): TemplateResult;
   _inputGroupBeforeTemplate(): TemplateResult;
   _inputGroupPrefixTemplate(): TemplateResult | typeof nothing;
-  _inputGroupInputTemplate(): TemplateResult;
+  protected _inputGroupInputTemplate(): TemplateResult;
   _inputGroupSuffixTemplate(): TemplateResult | typeof nothing;
   _inputGroupAfterTemplate(): TemplateResult;
   _feedbackTemplate(): TemplateResult;
@@ -146,7 +146,7 @@ export declare class FormControlHost {
   _enhanceLightDomA11y(): void;
   _enhanceLightDomA11yForAdditionalSlots(additionalSlots?: string[]): void;
   __reflectAriaAttr(attrName: string, nodes: HTMLElement[], reorder: boolean | undefined): void;
-  _isEmpty(modelValue?: unknown): boolean;
+  protected _isEmpty(modelValue?: unknown): boolean;
   _getAriaDescriptionElements(): HTMLElement[];
   public addToAriaLabelledBy(
     element: HTMLElement,
