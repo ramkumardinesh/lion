@@ -251,7 +251,10 @@ This will:
 ```js preview-story
 export const multipleChoice = () => html`
   <lion-combobox name="combo" label="Multiple" multiple-choice>
-    <demo-selection-display slot="selection-display"></demo-selection-display>
+    <demo-selection-display
+      style="display: contents;"
+      slot="selection-display"
+    ></demo-selection-display>
     ${lazyRender(
       listboxData.map(
         (entry, i) =>
