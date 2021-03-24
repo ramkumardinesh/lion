@@ -1,0 +1,516 @@
+{
+  "schemaVersion": "0.1.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "./index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LionCombobox",
+          "declaration": {
+            "name": "LionCombobox",
+            "module": "./src/LionCombobox.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "./lion-combobox.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "lion-combobox",
+          "declaration": {
+            "name": "LionCombobox",
+            "module": "./src/LionCombobox.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "./src/LionCombobox.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "LionCombobox",
+          "mixins": [
+            {
+              "name": "OverlayMixin",
+              "package": "@lion/overlays"
+            }
+          ],
+          "superclass": {
+            "name": "LionListbox",
+            "package": "@lion/listbox"
+          },
+          "members": [
+            {
+              "kind": "method",
+              "name": "_inputGroupInputTemplate",
+              "privacy": "public"
+            },
+            {
+              "kind": "method",
+              "name": "_overlayListboxTemplate",
+              "privacy": "public"
+            },
+            {
+              "kind": "method",
+              "name": "_groupTwoTemplate",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "slots",
+              "privacy": "public",
+              "type": {
+                "text": "SlotsMap"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_comboboxNode",
+              "privacy": "public",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_selectionDisplayNode",
+              "privacy": "public",
+              "type": {
+                "text": "SelectionDisplay | null"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_inputNode",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "_overlayContentNode",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "_overlayReferenceNode",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "_overlayInvokerNode",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "_listboxNode",
+              "privacy": "public"
+            },
+            {
+              "kind": "field",
+              "name": "_activeDescendantOwnerNode",
+              "privacy": "public"
+            },
+            {
+              "kind": "method",
+              "name": "requestUpdateInternal",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "name",
+                  "type": {
+                    "text": "'disabled'|'modelValue'|'readOnly'"
+                  }
+                },
+                {
+                  "name": "oldValue",
+                  "type": {
+                    "text": "unknown"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "matchCondition",
+              "privacy": "public",
+              "description": "When the preconfigurable `match-mode` conditions are not sufficient,\none can define a custom matching function.",
+              "parameters": [
+                {
+                  "name": "option",
+                  "type": {
+                    "text": "LionOption"
+                  }
+                },
+                {
+                  "name": "textboxValue",
+                  "type": {
+                    "text": "string"
+                  },
+                  "description": "current ._inputNode value"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_showOverlayCondition",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "options",
+                  "type": {
+                    "text": "{ currentValue: string, lastKey:string }"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_textboxOnInput",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "ev",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_textboxOnKeydown",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "ev",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_listboxOnClick",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "ev",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_setTextboxValue",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "v",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "__onOverlayClose",
+              "privacy": "public"
+            },
+            {
+              "kind": "method",
+              "name": "_repropagationCondition",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "target",
+                  "type": {
+                    "text": "EventTarget & ChoiceInputHost"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_onFilterMatch",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "option",
+                  "type": {
+                    "text": "LionOption & {__originalInnerHTML?:string}"
+                  }
+                },
+                {
+                  "name": "matchingString",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_onFilterUnmatch",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "option",
+                  "type": {
+                    "text": "LionOption & {__originalInnerHTML?:string}"
+                  }
+                },
+                {
+                  "name": "curValue",
+                  "type": {
+                    "text": "string"
+                  },
+                  "optional": true
+                },
+                {
+                  "name": "prevValue",
+                  "type": {
+                    "text": "string"
+                  },
+                  "optional": true
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "__computeUserIntendsAutoFill",
+              "privacy": "public",
+              "description": "Computes whether a user intends to autofill (inline autocomplete textbox)",
+              "parameters": [
+                {
+                  "name": "config",
+                  "type": {
+                    "text": "{ prevValue:string, curValue:string }"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_handleAutocompletion",
+              "privacy": "public",
+              "description": "Handles autocompletion. This entails:\n- list: shows a list on keydown character press\n- filter: filters list of potential matches according to matchmode or provided matchCondition\n- focus: automatically focuses closest match (makes it the activedescendant)\n- check: automatically checks/selects closest match when selection-follows-focus is enabled\n(this is the default configuration)\n- complete: completes the textbox value inline (the 'missing characters' will be added as\nselected text)"
+            },
+            {
+              "kind": "method",
+              "name": "__textboxInlineComplete",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "option",
+                  "default": "this.formElements[this.activeIndex]"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_autoSelectCondition",
+              "privacy": "public",
+              "description": "When this condition is false, an end user will have to manually select a suggested\noption from the list (by default when autocomplete is 'none' or 'list').\nFor autocomplete 'both' or 'inline', it will automatically select on a match."
+            },
+            {
+              "kind": "method",
+              "name": "_setupListboxNode",
+              "privacy": "public"
+            },
+            {
+              "kind": "method",
+              "name": "_defineOverlayConfig",
+              "privacy": "public"
+            },
+            {
+              "kind": "method",
+              "name": "_setupOverlayCtrl",
+              "privacy": "public"
+            },
+            {
+              "kind": "method",
+              "name": "_setupOpenCloseListeners",
+              "privacy": "public"
+            },
+            {
+              "kind": "method",
+              "name": "_teardownOpenCloseListeners",
+              "privacy": "public"
+            },
+            {
+              "kind": "method",
+              "name": "_listboxOnKeyDown",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "ev",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_syncToTextboxCondition",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "modelValue",
+                  "type": {
+                    "text": "string|string[]"
+                  }
+                },
+                {
+                  "name": "oldModelValue",
+                  "type": {
+                    "text": "string|string[]"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_syncToTextboxMultiple",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "modelValue",
+                  "type": {
+                    "text": "string[]"
+                  }
+                },
+                {
+                  "name": "oldModelValue",
+                  "type": {
+                    "text": "string[]"
+                  },
+                  "default": "[]"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_enhanceLightDomClasses",
+              "privacy": "public"
+            },
+            {
+              "kind": "method",
+              "name": "__initFilterListbox",
+              "privacy": "public"
+            },
+            {
+              "kind": "method",
+              "name": "__setComboboxDisabledAndReadOnly",
+              "privacy": "public"
+            },
+            {
+              "kind": "method",
+              "name": "__setupCombobox",
+              "privacy": "public"
+            },
+            {
+              "kind": "method",
+              "name": "__teardownCombobox",
+              "privacy": "public"
+            },
+            {
+              "kind": "method",
+              "name": "__requestShowOverlay",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "ev",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  },
+                  "optional": true
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "autocomplete",
+              "privacy": "public",
+              "type": {
+                "text": "'none'|'list'|'inline'|'both'"
+              },
+              "description": "When \"list\", will filter listbox suggestions based on textbox value.\nWhen \"both\", an inline completion string will be added to the textbox as well.",
+              "default": "'both'"
+            },
+            {
+              "kind": "field",
+              "name": "matchMode",
+              "privacy": "public",
+              "type": {
+                "text": "'begin'|'all'"
+              },
+              "description": "When typing in the textbox, will by default be set on 'begin',\nonly matching the beginning part in suggestion list.\n=> 'a' will match 'apple' from ['apple', 'pear', 'citrus'].\nWhen set to 'all', will match middle of the word as well\n=> 'a' will match 'apple' and 'pear'",
+              "default": "'all'"
+            },
+            {
+              "kind": "field",
+              "name": "showAllOnEmpty",
+              "privacy": "public",
+              "description": "When true, the listbox is open and textbox goes from a value to empty, all options are shown.\nBy default, the listbox closes on empty, similar to wai-aria example and <datalist>",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "__shouldAutocompleteNextUpdate",
+              "privacy": "public"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "autocomplete",
+              "fieldName": "autocomplete"
+            },
+            {
+              "name": "match-mode",
+              "fieldName": "matchMode"
+            },
+            {
+              "name": "show-all-on-empty",
+              "fieldName": "showAllOnEmpty"
+            },
+            {
+              "name": "__shouldAutocompleteNextUpdate",
+              "fieldName": "__shouldAutocompleteNextUpdate"
+            }
+          ],
+          "tagName": "lion-combobox"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LionCombobox",
+          "declaration": {
+            "name": "LionCombobox",
+            "module": "./src/LionCombobox.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "./types/SelectionDisplay.d.ts",
+      "declarations": [],
+      "exports": []
+    }
+  ]
+}
